@@ -64,6 +64,10 @@ body {
   display: none;
 }
 
+.volumecontrols:hover #volume {
+  display: initial;
+}
+
 .visible {
   display: initial !important;
 }

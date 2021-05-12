@@ -1,4 +1,5 @@
 var audio = document.getElementById("audio");
+var volumebtn = document.getElementById("volumebtn");
 var volume = document.getElementById("volume");
 
 function volumeSet(){audio.volume=volume.value}
@@ -10,6 +11,12 @@ function play() {
     audio.pause();
 }
 
-function showVolumeSeekbar() {
-  volume.classList.toggle("visible");
+function mute() {
+  if (audio.muted) {
+    audio.muted=false;
+    volumebtn.src='icon/sound-on-outline.png';
+  } else {
+    audio.muted=true;
+    volumebtn.src='sound-off-outline.png';
+  }
 }
