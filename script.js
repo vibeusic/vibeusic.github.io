@@ -17,6 +17,6 @@ function mute() {
     volumebtn.src='icon/sound-on-outline.png';
   } else {
     audio.muted=true;
-    volumebtn.src='sound-off-outline.png';
+    volumebtn.src='icon/sound-off-outline.png';
   }
 }
