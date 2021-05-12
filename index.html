@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="vibeusic.ico">
+    <meta charset="utf-8">
+    <title>Vibeusic</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="player-box">
+
+      <audio src="audio/Juice WRLD Let Me Know (I Wonder Why Freestyle) (Official Audio).mp3" id="audio"></audio>
+
+      <img id="cover" src="img/cover.jpg" onclick="play()">
+
+        <div class="player">
+          <div class="infos">
+            <p class="song">Let Me Know (I Wonder Why Freestyle)</p>
+            <p class="artist">Juice WRLD</p>
+            </div>
+
+            <div class="">
+
+            </div>
+
+            <div class="volumecontrols">
+              <input id="volumebtn" type="image" src="svg/sound-on-outline.png" onclick="showVolumeSeekbar()" />
+              <input id="volume" type="range" name="rng" min="0" step="0.01" max="0.7" value="0" onchange="volumeSet()">
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
