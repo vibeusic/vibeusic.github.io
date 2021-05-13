@@ -30,7 +30,7 @@ body {
 .player {
   width: 100%;
   height: 100%;
-  padding: 0px 10px;
+  padding: 0px 20px;
   backdrop-filter: blur(30px);
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -47,27 +47,45 @@ body {
   font-size: 16px;
 }
 
-.volumecontrols {
+.controlsection {
+  width: 60%;
+  height: 100%;
+  display: block;
+}
+
+#seekbar {
   width: 100%;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playbtn {
+  width: 50px;
+  height: 50px;
+  margin: 0px 30px;
+}
+
+#previousbtn, #nextbtn {
+  width: 30px;
+  height: 30px;
+}
+
+.volumecontrols {
+  position: absolute;
+  right: 0px;
+  width: 200px;
   height: 100%;
   display: flex;
   align-items: center;
+  align-self: flex-end;
+  justify-content: flex-end;
 }
 
 #volumebtn {
   width: 60px;
   height: 60px;
-  fill: white;
-}
-
-#volume {
-  display: none;
-}
-
-.volumecontrols:hover #volume {
-  display: initial;
-}
-
-.visible {
-  display: initial !important;
 }

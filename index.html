@@ -9,9 +9,11 @@
   <body>
     <div class="player-box">
 
-      <audio src="audio/Juice WRLD Let Me Know (I Wonder Why Freestyle) (Official Audio).mp3" id="audio"></audio>
+      <audio id="audio" preload="metadata" onloadedmetadata="mDur()" ontimeupdate="mPlay()">
+        <source src="audio/Juice WRLD Let Me Know (I Wonder Why Freestyle) (Official Audio).mp3" type="audio/mpeg">
+      </audio>
 
-      <img id="cover" src="img/cover.jpg" onclick="play()">
+      <img id="cover" src="img/cover.jpg">
 
         <div class="player">
           <div class="infos">
@@ -19,8 +21,14 @@
             <p class="artist">Juice WRLD</p>
             </div>
 
-            <div class="">
+            <div class="controlsection">
 
+              <div class="controls">
+                <input id="previousbtn" type="image" src="icon/previous-solid.png" onclick="previous()">
+                <input id="playbtn" type="image" src="icon/play-circle-outline.png" onclick="play()"/>
+                <input id="nextbtn" type="image" src="icon/next-solid.png" onclick="next()">
+              </div>
+              <input id="seekbar" type="range" name="rng" min="0" step="0.25" value="0" onchange="mSet()" max="mDur()">
             </div>
 
             <div class="volumecontrols">
