@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vibeusic</title>
+    <link rel="icon" href="vibeusic.ico">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="player-box">
+      <img id="cover" src="src/img/cover.jpg">
+      <audio id="audio" preload="metadata">
+        <source src="src/snd/Juice WRLD - Handle ft. Mac Miller, XXXTENTACION  Lil Peep (Music Video).mp3" type="audio/mpeg">
+      </audio>
+      <div class="player-box2">
+        <div class="player">
+          <div class="controls">
+            <input id="playbtn" type="image" src="src/ico/play-circle-outline.png" onclick="play()"/>
+          </div>
+          <div class="volumecontrols">
+            <input id="volumeslider" type="range" min="0" max="1" step="0.05" value="1" onchange="volumeSet( )">
+            <input id="mutebtn" type="image" src="src/ico/sound-on-outline.png" onclick="mute()">
+          </div>
+        </div>
+        <input id="seekbar" type="range" min="0" step="0.2" value="0"/>
+      </div>
+    </div>
+
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
